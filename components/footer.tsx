@@ -68,7 +68,7 @@ export function Footer() {
                 <Twitter className="w-5 h-5" />
               </a>
               <a
-                href="#"
+                href="https://www.youtube.com/@Ashcontent001"
                 className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
               >
                 <Youtube className="w-5 h-5" />
