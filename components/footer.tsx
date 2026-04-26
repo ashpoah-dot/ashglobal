@@ -50,13 +50,13 @@ export function Footer() {
             </p>
             <div className="flex gap-4">
               <a
-                href="#"
+                href="https://www.facebook.com/profile.php?id=100064469632043"
                 className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
               >
                 <Facebook className="w-5 h-5" />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/ash_global_initiatives/"
                 className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
               >
                 <Instagram className="w-5 h-5" />
@@ -152,11 +152,11 @@ export function Footer() {
               </div>
               <a href="tel:+254700000000" className="flex items-center gap-2 hover:text-primary transition-colors">
                 <Phone className="w-4 h-4 text-primary" />
-                <span>+254 700 000 000</span>
+                <span>+254 728 904 762</span>
               </a>
-              <a href="mailto:info@ashglobal.org" className="flex items-center gap-2 hover:text-primary transition-colors">
+              <a href="mailto:ashpoah@gmail.com" className="flex items-center gap-2 hover:text-primary transition-colors">
                 <Mail className="w-4 h-4 text-primary" />
-                <span>info@ashglobal.org</span>
+                <span>ashpoah@gmail.com</span>
               </a>
             </div>
           </div>
