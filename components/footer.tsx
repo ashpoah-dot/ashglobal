@@ -154,9 +154,9 @@ export function Footer() {
                 <Phone className="w-4 h-4 text-primary" />
                 <span>+254 728 904 762</span>
               </a>
-              <a href="mailto:info@ashglobal.org" className="flex items-center gap-2 hover:text-primary transition-colors">
+              <a href="mailto:ashpoah@gmail.com" className="flex items-center gap-2 hover:text-primary transition-colors">
                 <Mail className="w-4 h-4 text-primary" />
-                <span>info@ashglobal.org</span>
+                <span>ashpoah@gmail.com</span>
               </a>
             </div>
           </div>
