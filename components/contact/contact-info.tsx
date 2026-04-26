@@ -14,8 +14,8 @@ const contactDetails = [
   {
     icon: Phone,
     title: "Call Us",
-    details: ["+254 700 000 000", "+254 711 111 111"],
-    links: ["tel:+254700000000", "tel:+254711111111"],
+    details: ["+254 728 904 762", "+254 728 904 762"],
+    links: ["tel:+254728904762", "tel:+254728904762"],
   },
   {
     icon: Mail,
