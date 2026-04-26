@@ -86,7 +86,7 @@ export function BeautyServices() {
               <div
                 className="h-80 bg-cover bg-center"
                 style={{
-                  backgroundImage: `url(https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800&q=80)`,
+                  backgroundImage: `url(https://i.pinimg.com/736x/fe/32/98/fe32986c4f18f967d25af694d11e0bca.jpg)`,
                 }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
