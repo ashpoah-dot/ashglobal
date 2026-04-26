@@ -31,10 +31,10 @@ const contactDetails = [
 ]
 
 const socials = [
-  { icon: Facebook, href: "#", label: "Facebook" },
-  { icon: Instagram, href: "#", label: "Instagram" },
-  { icon: Twitter, href: "#", label: "Twitter" },
-  { icon: Youtube, href: "#", label: "YouTube" },
+  { icon: Facebook, href: "https://www.facebook.com/profile.php?id=100064469632043", label: "Facebook" },
+  { icon: Instagram, href: "https://www.instagram.com/ashglobalinitiatives/", label: "Instagram" },
+  { icon: Twitter, href: "https://twitter.com/ASHGlobalInit", label: "Twitter" },
+  { icon: Youtube, href: "https://www.youtube.com/@Ashcontent001", label: "YouTube" },
 ]
 
 export function ContactInfo() {
