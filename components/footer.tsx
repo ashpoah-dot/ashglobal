@@ -152,7 +152,7 @@ export function Footer() {
               </div>
               <a href="tel:+254700000000" className="flex items-center gap-2 hover:text-primary transition-colors">
                 <Phone className="w-4 h-4 text-primary" />
-                <span>+254 700 000 000</span>
+                <span>+254 728 904 762</span>
               </a>
               <a href="mailto:info@ashglobal.org" className="flex items-center gap-2 hover:text-primary transition-colors">
                 <Mail className="w-4 h-4 text-primary" />
