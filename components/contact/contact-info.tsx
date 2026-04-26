@@ -20,8 +20,8 @@ const contactDetails = [
   {
     icon: Mail,
     title: "Email Us",
-    details: ["info@ashglobal.org", "support@ashglobal.org"],
-    links: ["mailto:info@ashglobal.org", "mailto:support@ashglobal.org"],
+    details: ["ashpoah@gmail.com", "support@ashglobal.org"],
+    links: ["mailto:ashpoah@gmail.com", "mailto:support@ashglobal.org"],
   },
   {
     icon: Clock,
