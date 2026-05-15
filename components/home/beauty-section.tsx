@@ -111,7 +111,7 @@ export function BeautySection() {
                     index === 0 ? "row-span-2" : ""
                   }`}
                 >
-                  <div
+                  <
                     className={`bg-cover bg-center ${index === 0 ? "h-full min-h-[400px]" : "h-48"}`}
                     style={{ backgroundImage: `url(${image})` }}
                   />
