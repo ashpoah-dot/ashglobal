@@ -1,39 +1,52 @@
 import type { Metadata, Viewport } from 'next'
-import { Inter, Playfair_Display } from 'next/font/google'
+import { Poppins, Montserrat, Open_Sans } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { ThemeProvider } from '@/components/theme-provider'
 import { Navbar } from '@/components/navbar'
 import { Footer } from '@/components/footer'
 import './globals.css'
 
-const inter = Inter({ 
+const poppins = Poppins({ 
   subsets: ['latin'],
-  variable: '--font-inter',
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-poppins',
   display: 'swap',
 })
 
-const playfair = Playfair_Display({ 
+const montserrat = Montserrat({ 
   subsets: ['latin'],
-  variable: '--font-playfair',
+  weight: ['600', '700'],
+  variable: '--font-montserrat',
+  display: 'swap',
+})
+
+const openSans = Open_Sans({
+  subsets: ['latin'],
+  weight: ['400', '500', '600'],
+  variable: '--font-open-sans',
   display: 'swap',
 })
 
 export const metadata: Metadata = {
-  title: 'ASH Global Initiatives | Building Stronger People Everywhere',
-  description: 'ASH Global Initiatives is a community-driven organization in Kenya focused on skill development, vocational training, youth empowerment, business mentorship, and social impact.',
-  keywords: ['community empowerment', 'vocational training', 'Kenya', 'youth empowerment', 'skill development', 'ASH Global'],
+  title: 'ASH Global Initiatives | Youth Empowerment & Community Development',
+  description: 'ASH Global Initiatives empowers youth through skill development, vocational training, business mentorship, IT programs, and community development in Kenya. Transform lives through education and opportunity.',
+  keywords: ['youth empowerment', 'vocational training', 'Kenya', 'community development', 'skill development', 'business mentorship', 'technology training', 'social impact'],
   authors: [{ name: 'ASH Global Initiatives' }],
   openGraph: {
     title: 'ASH Global Initiatives',
-    description: 'Empowering Youth. Transforming Communities.',
+    description: 'Together we arise and shine - empowering youth, transforming communities.',
     type: 'website',
+  },
+  icons: {
+    icon: '/logo.svg',
+    apple: '/logo.svg',
   },
 }
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#f5f5f0' },
-    { media: '(prefers-color-scheme: dark)', color: '#1a1a1a' },
+    { media: '(prefers-color-scheme: light)', color: '#0A3D62' },
+    { media: '(prefers-color-scheme: dark)', color: '#4DA6D6' },
   ],
   width: 'device-width',
   initialScale: 1,
@@ -46,7 +59,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning className="bg-background">
-      <body className={`${inter.variable} ${playfair.variable} font-sans antialiased`}>
+      <head>
+        <link rel="icon" href="/logo.svg" type="image/svg+xml" />
+      </head>
+      <body className={`${poppins.variable} ${montserrat.variable} ${openSans.variable} font-sans antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

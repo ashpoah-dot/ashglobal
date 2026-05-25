@@ -4,71 +4,76 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Light mode - elegant warm theme */
-  --background: oklch(0.98 0.005 80);
-  --foreground: oklch(0.15 0.01 60);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.15 0.01 60);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.15 0.01 60);
-  --primary: oklch(0.65 0.15 75);
-  --primary-foreground: oklch(0.12 0.01 60);
-  --secondary: oklch(0.95 0.01 80);
-  --secondary-foreground: oklch(0.2 0.01 60);
-  --muted: oklch(0.94 0.01 80);
-  --muted-foreground: oklch(0.45 0.01 60);
-  --accent: oklch(0.75 0.12 85);
-  --accent-foreground: oklch(0.15 0.01 60);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.577 0.245 27.325);
-  --border: oklch(0.88 0.01 80);
-  --input: oklch(0.92 0.01 80);
-  --ring: oklch(0.65 0.15 75);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
+  /* Light mode - Professional NGO theme */
+  --background: #F8F9FA;
+  --foreground: #1F1F1F;
+  --card: #FFFFFF;
+  --card-foreground: #1F1F1F;
+  --popover: #FFFFFF;
+  --popover-foreground: #1F1F1F;
+  --primary: #0A3D62;
+  --primary-foreground: #FFFFFF;
+  --secondary: #0F9D58;
+  --secondary-foreground: #FFFFFF;
+  --muted: #E8EAED;
+  --muted-foreground: #5F6368;
+  --accent: #D4A017;
+  --accent-foreground: #1F1F1F;
+  --destructive: #D32F2F;
+  --destructive-foreground: #FFFFFF;
+  --border: #E0E0E0;
+  --input: #F5F5F5;
+  --ring: #0A3D62;
+  --chart-1: #0A3D62;
+  --chart-2: #0F9D58;
+  --chart-3: #D4A017;
+  --chart-4: #1976D2;
+  --chart-5: #0097A7;
   --radius: 0.75rem;
-  --gold: oklch(0.75 0.15 85);
-  --gold-light: oklch(0.85 0.12 85);
-  --gold-dark: oklch(0.55 0.15 75);
+  --blue: #0A3D62;
+  --green: #0F9D58;
+  --gold: #D4A017;
+  --gold-light: #E6C547;
+  --gold-dark: #B8860B;
 }
 
 .dark {
-  /* Dark luxury theme - black + gold */
-  --background: oklch(0.12 0.01 60);
-  --foreground: oklch(0.95 0.01 80);
-  --card: oklch(0.16 0.01 60);
-  --card-foreground: oklch(0.95 0.01 80);
-  --popover: oklch(0.14 0.01 60);
-  --popover-foreground: oklch(0.95 0.01 80);
-  --primary: oklch(0.75 0.15 85);
-  --primary-foreground: oklch(0.12 0.01 60);
-  --secondary: oklch(0.22 0.01 60);
-  --secondary-foreground: oklch(0.95 0.01 80);
-  --muted: oklch(0.22 0.01 60);
-  --muted-foreground: oklch(0.65 0.01 80);
-  --accent: oklch(0.65 0.12 75);
-  --accent-foreground: oklch(0.12 0.01 60);
-  --destructive: oklch(0.5 0.2 25);
-  --destructive-foreground: oklch(0.95 0.01 80);
-  --border: oklch(0.28 0.02 70);
-  --input: oklch(0.22 0.01 60);
-  --ring: oklch(0.75 0.15 85);
-  --chart-1: oklch(0.75 0.15 85);
-  --chart-2: oklch(0.65 0.12 75);
-  --chart-3: oklch(0.55 0.1 70);
-  --chart-4: oklch(0.85 0.12 90);
-  --chart-5: oklch(0.45 0.08 65);
-  --gold: oklch(0.75 0.15 85);
-  --gold-light: oklch(0.85 0.12 85);
-  --gold-dark: oklch(0.55 0.15 75);
+  /* Dark mode - Professional NGO theme */
+  --background: #0F1419;
+  --foreground: #E8EAED;
+  --card: #1A1F26;
+  --card-foreground: #E8EAED;
+  --popover: #202630;
+  --popover-foreground: #E8EAED;
+  --primary: #4DA6D6;
+  --primary-foreground: #0F1419;
+  --secondary: #57C766;
+  --secondary-foreground: #0F1419;
+  --muted: #2C3137;
+  --muted-foreground: #9AA0A6;
+  --accent: #D4A017;
+  --accent-foreground: #0F1419;
+  --destructive: #F44336;
+  --destructive-foreground: #FFFFFF;
+  --border: #2C3137;
+  --input: #202630;
+  --ring: #4DA6D6;
+  --chart-1: #4DA6D6;
+  --chart-2: #57C766;
+  --chart-3: #D4A017;
+  --chart-4: #64B5F6;
+  --chart-5: #4FC3F7;
+  --radius: 0.75rem;
+  --blue: #4DA6D6;
+  --green: #57C766;
+  --gold: #D4A017;
+  --gold-light: #E6C547;
+  --gold-dark: #B8860B;
 }
 
 @theme inline {
-  --font-sans: 'Inter', 'Geist', sans-serif;
-  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'Poppins', 'Open Sans', sans-serif;
+  --font-serif: 'Montserrat', serif;
   --font-mono: 'Geist Mono', monospace;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -94,6 +99,8 @@
   --color-chart-3: var(--chart-3);
   --color-chart-4: var(--chart-4);
   --color-chart-5: var(--chart-5);
+  --color-blue: var(--blue);
+  --color-green: var(--green);
   --color-gold: var(--gold);
   --color-gold-light: var(--gold-light);
   --color-gold-dark: var(--gold-dark);
@@ -112,7 +119,7 @@
   }
 }
 
-/* Gold gradient utility */
+/* Gradient utilities */
 .text-gradient-gold {
   background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 50%, var(--gold-dark) 100%);
   -webkit-background-clip: text;
@@ -122,6 +129,14 @@
 
 .bg-gradient-gold {
   background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 50%, var(--gold-dark) 100%);
+}
+
+.bg-gradient-primary {
+  background: linear-gradient(135deg, var(--blue) 0%, var(--primary) 100%);
+}
+
+.bg-gradient-green {
+  background: linear-gradient(135deg, var(--green) 0%, #00C853 100%);
 }
 
 /* Glassmorphism */

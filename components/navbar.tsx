@@ -4,8 +4,8 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { motion, AnimatePresence } from "framer-motion"
-import { Menu, X, Sun, Moon, ChevronDown } from "lucide-react"
-import { useTheme } from "next-themes"
+import { Menu, X, ChevronDown } from "lucide-react"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 
@@ -22,6 +22,8 @@ const navLinks = [
       { href: "/services#agency", label: "Agency Services" },
     ]
   },
+  { href: "/it-programs", label: "IT Programs" },
+  { href: "/members-welfare", label: "Members Welfare" },
   { href: "/training", label: "Training" },
   { href: "/resources", label: "Resources" },
   { href: "/media", label: "Media" },
@@ -33,7 +35,6 @@ export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
   const pathname = usePathname()
-  const { theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
@@ -45,31 +46,30 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  const toggleTheme = () => {
-    setTheme(theme === "dark" ? "light" : "dark")
-  }
-
   return (
     <header
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         isScrolled
-          ? "bg-background/90 backdrop-blur-lg border-b border-border shadow-lg"
-          : "bg-transparent"
+          ? "bg-white/95 backdrop-blur-lg border-b border-gray-200 shadow-lg"
+          : "bg-white/80 backdrop-blur-md"
       )}
     >
       <nav className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-12 h-12 rounded-full bg-gradient-gold flex items-center justify-center">
-              <span className="font-serif text-xl font-bold text-primary-foreground">ASH</span>
-            </div>
+          <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+            <Image
+              src="/logo.svg"
+              alt="ASH Global Initiatives"
+              width={50}
+              height={50}
+              className="w-12 h-12"
+              priority
+            />
             <div className="hidden sm:block">
-              <span className="font-serif text-xl font-bold text-foreground group-hover:text-primary transition-colors">
-                ASH Global
-              </span>
-              <p className="text-xs text-muted-foreground">Initiatives</p>
+              <div className="text-sm font-bold text-primary">ASH GLOBAL</div>
+              <div className="text-xs text-secondary font-semibold">INITIATIVES</div>
             </div>
           </Link>
 
@@ -87,8 +87,8 @@ export function Navbar() {
                   className={cn(
                     "px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 flex items-center gap-1",
                     pathname === link.href
-                      ? "text-primary bg-primary/10"
-                      : "text-foreground/80 hover:text-primary hover:bg-primary/5"
+                      ? "text-primary bg-blue-50"
+                      : "text-gray-700 hover:text-primary hover:bg-blue-50"
                   )}
                 >
                   {link.label}
@@ -103,13 +103,13 @@ export function Navbar() {
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 10 }}
-                        className="absolute top-full left-0 mt-2 w-56 bg-card border border-border rounded-xl shadow-xl overflow-hidden"
+                        className="absolute top-full left-0 mt-2 w-56 bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden"
                       >
                         {link.children.map((child) => (
                           <Link
                             key={child.href}
                             href={child.href}
-                            className="block px-4 py-3 text-sm text-foreground/80 hover:text-primary hover:bg-primary/5 transition-colors"
+                            className="block px-4 py-3 text-sm text-gray-700 hover:text-primary hover:bg-blue-50 transition-colors"
                           >
                             {child.label}
                           </Link>
@@ -124,23 +124,8 @@ export function Navbar() {
 
           {/* Actions */}
           <div className="flex items-center gap-3">
-            {mounted && (
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={toggleTheme}
-                className="rounded-full"
-              >
-                {theme === "dark" ? (
-                  <Sun className="w-5 h-5" />
-                ) : (
-                  <Moon className="w-5 h-5" />
-                )}
-              </Button>
-            )}
-            
             <Link href="/donate" className="hidden sm:block">
-              <Button className="bg-gradient-gold text-primary-foreground hover:opacity-90 rounded-full px-6">
+              <Button className="bg-gradient-to-r from-primary to-secondary text-white hover:shadow-lg transition-all rounded-lg px-6 font-semibold">
                 Donate
               </Button>
             </Link>
@@ -149,7 +134,7 @@ export function Navbar() {
             <Button
               variant="ghost"
               size="icon"
-              className="lg:hidden"
+              className="lg:hidden text-gray-700"
               onClick={() => setIsOpen(!isOpen)}
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -166,7 +151,7 @@ export function Navbar() {
               exit={{ opacity: 0, height: 0 }}
               className="lg:hidden overflow-hidden"
             >
-              <div className="py-4 space-y-2 border-t border-border">
+              <div className="py-4 space-y-2 border-t border-gray-200">
                 {navLinks.map((link) => (
                   <div key={link.href}>
                     <Link
@@ -175,8 +160,8 @@ export function Navbar() {
                       className={cn(
                         "block px-4 py-3 rounded-lg text-base font-medium transition-colors",
                         pathname === link.href
-                          ? "text-primary bg-primary/10"
-                          : "text-foreground/80 hover:text-primary hover:bg-primary/5"
+                          ? "text-primary bg-blue-50"
+                          : "text-gray-700 hover:text-primary hover:bg-blue-50"
                       )}
                     >
                       {link.label}
@@ -188,7 +173,7 @@ export function Navbar() {
                             key={child.href}
                             href={child.href}
                             onClick={() => setIsOpen(false)}
-                            className="block px-4 py-2 text-sm text-muted-foreground hover:text-primary transition-colors"
+                            className="block px-4 py-2 text-sm text-gray-600 hover:text-primary transition-colors"
                           >
                             {child.label}
                           </Link>
@@ -202,7 +187,7 @@ export function Navbar() {
                   onClick={() => setIsOpen(false)}
                   className="block px-4 py-3"
                 >
-                  <Button className="w-full bg-gradient-gold text-primary-foreground hover:opacity-90 rounded-full">
+                  <Button className="w-full bg-gradient-to-r from-primary to-secondary text-white hover:shadow-lg rounded-lg font-semibold">
                     Donate Now
                   </Button>
                 </Link>
