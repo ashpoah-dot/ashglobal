@@ -65,9 +65,10 @@ export default function RootLayout({
       <body className={`${poppins.variable} ${montserrat.variable} ${openSans.variable} font-sans antialiased`}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark"
+          defaultTheme="system"
           enableSystem
-          disableTransitionOnChange
+          storageKey="ash-global-theme"
+          disableTransitionOnChange={false}
         >
           <Navbar />
           <main className="min-h-screen">
