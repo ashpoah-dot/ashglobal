@@ -14,14 +14,14 @@ const contactDetails = [
   {
     icon: Phone,
     title: "Call Us",
-    details: ["+254 700 000 000", "+254 711 111 111"],
-    links: ["tel:+254700000000", "tel:+254711111111"],
+    details: ["+254 728 904 762", "+254 728 904 762"],
+    links: ["tel:+254728904762", "tel:+254728904762"],
   },
   {
     icon: Mail,
     title: "Email Us",
-    details: ["info@ashglobal.org", "support@ashglobal.org"],
-    links: ["mailto:info@ashglobal.org", "mailto:support@ashglobal.org"],
+    details: ["ashpoah@gmail.com", "support@ashglobal.org"],
+    links: ["mailto:ashpoah@gmail.com", "mailto:support@ashglobal.org"],
   },
   {
     icon: Clock,
@@ -31,10 +31,10 @@ const contactDetails = [
 ]
 
 const socials = [
-  { icon: Facebook, href: "#", label: "Facebook" },
-  { icon: Instagram, href: "#", label: "Instagram" },
-  { icon: Twitter, href: "#", label: "Twitter" },
-  { icon: Youtube, href: "#", label: "YouTube" },
+  { icon: Facebook, href: "https://www.facebook.com/profile.php?id=100064469632043", label: "Facebook" },
+  { icon: Instagram, href: "https://www.instagram.com/ashglobalinitiatives/", label: "Instagram" },
+  { icon: Twitter, href: "https://twitter.com/ASHGlobalInit", label: "Twitter" },
+  { icon: Youtube, href: "https://www.youtube.com/@Ashcontent001", label: "YouTube" },
 ]
 
 export function ContactInfo() {
